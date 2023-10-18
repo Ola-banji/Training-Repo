@@ -30,7 +30,12 @@ select first_name, Last_name, department_id from employees where department_id=
 
 --10.) Display all the employees in the same department as Martha Sullivan and that make more than TJ Olson.
 
+GREAT ATTEMPT!
+
 select first_name, Last_name, department_id from employees where department_id=
 (select department_id from employees where first_name = 'Martha' and last_name = 'Sullivan')
-select first_name, last_name, salary from employees where salary>
+--to connect here, you use the AND function instead of writing a different outer query
+
+--select first_name, last_name, salary from employees 
+AND where salary>
 (select salary from employees where first_name = 'TJ' and last_name = 'Olson') order by salary desc 
